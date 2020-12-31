@@ -1,0 +1,46 @@
+Parsing meta data from /home/machanv/xplrtst/frmwrk/metadata/metadata.xlsx..
+jsii.errors.JavaScriptError: 
+  Error: Stack name must match the regular expression: /^[A-Za-z][A-Za-z0-9-]*$/, got 'frmwrk_s3'
+      at new Stack (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/stack.js:74:19)
+      at /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:49
+      at Kernel._wrapSandboxCode (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4040:16)
+      at Kernel._create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:26)
+      at Kernel.create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3300:21)
+      at KernelHost.processRequest (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13119:28)
+      at KernelHost.run (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13057:14)
+      at Immediate._onImmediate (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13060:37)
+      at processImmediate (internal/timers.js:456:21)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "app.py", line 103, in <module>
+    frmwrkStack(app, "frmwrk_s3", deploy_step=1, sttm_map=sttm_map)
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_runtime.py", line 69, in __call__
+    inst = super().__call__(*args, **kwargs)
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/frmwrk/frmwrk_stack.py", line 39, in __init__
+    super().__init__(scope, construct_id)
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/aws_cdk/core/__init__.py", line 13889, in __init__
+    jsii.create(Stack, self, [scope, id, props])
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/__init__.py", line 257, in create
+    for iface in getattr(klass, "__jsii_ifaces__", [])
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/providers/process.py", line 347, in create
+    return self._process.send(request, CreateResponse)
+  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/providers/process.py", line 332, in send
+    raise JSIIError(resp.error) from JavaScriptError(resp.stack)
+jsii.errors.JSIIError: Stack name must match the regular expression: /^[A-Za-z][A-Za-z0-9-]*$/, got 'frmwrk_s3'
+/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:142
+            construct.synthesizer.synthesize(session);
+                                  ^
+
+TypeError: Cannot read property 'synthesize' of undefined
+    at /tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:142:35
+    at visit (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)
+    at visit (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)
+    at synthesizeTree (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:136:5)
+    at Object.synthesize (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:32:5)
+    at App.synth (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/stage.js:98:41)
+    at process.<anonymous> (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/app.js:58:51)
+    at Object.onceWrapper (events.js:418:26)
+    at process.emit (events.js:311:20)
+Subprocess exited with error 1

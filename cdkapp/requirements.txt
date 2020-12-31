@@ -1,0 +1,11 @@
+-e .
+xlrd==1.2.0
+aws-cdk.core
+aws-cdk.aws-rds
+aws-cdk.aws-ec2
+aws-cdk.aws_s3
+aws-cdk.aws_glue
+aws-cdk.aws_iam
+boto3
+botocore
+logging

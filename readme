@@ -1,0 +1,12 @@
+What data set to use??
+1. Stock ticker data - https://www.nasdaq.com/market-activity/quotes/historical
+   a. Ticker, Date, Last-Close, Volume, Open, High, Low
+
+Setup
+0. CDK app setup
+1. Create S3 bucket for raw CSV files
+   1.5 Upload raw sample data file to this bucket
+2. Create S3 bucket for transformed Parquet files
+3. Create Glue Crawler to create Glue table for raw CSV files
+4. Create Glue Crawler to create Flue table for transformed Parquet files
+
