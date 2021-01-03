@@ -1,46 +1,89 @@
 Parsing meta data from /home/machanv/xplrtst/frmwrk/metadata/metadata.xlsx..
-jsii.errors.JavaScriptError: 
-  Error: Stack name must match the regular expression: /^[A-Za-z][A-Za-z0-9-]*$/, got 'frmwrk_s3'
-      at new Stack (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/stack.js:74:19)
-      at /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:49
-      at Kernel._wrapSandboxCode (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4040:16)
-      at Kernel._create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:26)
-      at Kernel.create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3300:21)
-      at KernelHost.processRequest (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13119:28)
-      at KernelHost.run (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13057:14)
-      at Immediate._onImmediate (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13060:37)
-      at processImmediate (internal/timers.js:456:21)
+Namespace(apphomedir='/home/machanv/xplrtst/frmwrk')
+deploy_step is CreateGlueComponents
+Creating Glue Database first.. 
+Creating Glue components.. Crawlers, Tables, and Jobs..
+database_name is findb for glue crawler for NULL and s3Target is ticker-landing
+database_name is findb for glue crawler for NULL and s3Target is party-landing
+database_name is findb for glue crawler for ticker-landing and s3Target is ticker-parquet
+database_name is findb for glue crawler for party-landing and s3Target is party-parquet
+database_name is findb for glue crawler for ticker-parquet and s3Target is ticker-enterprise
+database_name is findb for glue crawler for party-parquet and s3Target is party-enterprise
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
 
-The above exception was the direct cause of the following exception:
+IAM Statement Changes
+[90m┌[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+[90m│[39m   [90m│[39m Resource         [90m│[39m Effect [90m│[39m Action         [90m│[39m Principal                  [90m│[39m Condition [90m│[39m
+[90m├[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┤[39m
+[90m│[39m + [90m│[39m ${glue_role.Arn} [90m│[39m Allow  [90m│[39m sts:AssumeRole [90m│[39m Service:glue.amazonaws.com [90m│[39m           [90m│[39m
+[90m└[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+IAM Policy Changes
+[90m┌[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┬[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┐[39m
+[90m│[39m   [90m│[39m Resource     [90m│[39m Managed Policy ARN                                       [90m│[39m
+[90m├[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┼[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┤[39m
+[90m│[39m + [90m│[39m ${glue_role} [90m│[39m arn:${AWS::Partition}:iam::aws:policy/AWSGlueServiceRole [90m│[39m
+[90m└[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┴[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m─[39m[90m┘[39m
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
 
-Traceback (most recent call last):
-  File "app.py", line 103, in <module>
-    frmwrkStack(app, "frmwrk_s3", deploy_step=1, sttm_map=sttm_map)
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_runtime.py", line 69, in __call__
-    inst = super().__call__(*args, **kwargs)
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/frmwrk/frmwrk_stack.py", line 39, in __init__
-    super().__init__(scope, construct_id)
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/aws_cdk/core/__init__.py", line 13889, in __init__
-    jsii.create(Stack, self, [scope, id, props])
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/__init__.py", line 257, in create
-    for iface in getattr(klass, "__jsii_ifaces__", [])
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/providers/process.py", line 347, in create
-    return self._process.send(request, CreateResponse)
-  File "/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_kernel/providers/process.py", line 332, in send
-    raise JSIIError(resp.error) from JavaScriptError(resp.stack)
-jsii.errors.JSIIError: Stack name must match the regular expression: /^[A-Za-z][A-Za-z0-9-]*$/, got 'frmwrk_s3'
-/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:142
-            construct.synthesizer.synthesize(session);
-                                  ^
+Do you wish to deploy these changes (y/n)? Do you wish to deploy these changes (y/n)? Do you wish to deploy these changes (y/n)? Do you wish to deploy these changes (y/n)? frmwrkCreateGlueComponents: deploying...
+frmwrkCreateGlueComponents: creating CloudFormation changeset...
+ 0/8 | 6:15:29 PM | REVIEW_IN_PROGRESS   | AWS::CloudFormation::Stack | frmwrkCreateGlueComponents User Initiated
+ 0/8 | 6:15:35 PM | CREATE_IN_PROGRESS   | AWS::CloudFormation::Stack | frmwrkCreateGlueComponents User Initiated
+ 0/8 | 6:15:56 PM | CREATE_IN_PROGRESS   | AWS::IAM::Role      | glue_role (glueroleFCCAEB57) 
+ 0/8 | 6:15:56 PM | CREATE_IN_PROGRESS   | AWS::CDK::Metadata  | CDKMetadata/Default (CDKMetadata) 
+ 0/8 | 6:15:56 PM | CREATE_IN_PROGRESS   | AWS::Glue::Database | findb (findbC824BA95) 
+ 0/8 | 6:15:57 PM | CREATE_IN_PROGRESS   | AWS::IAM::Role      | glue_role (glueroleFCCAEB57) Resource creation Initiated
+ 0/8 | 6:15:57 PM | CREATE_FAILED        | AWS::IAM::Role      | glue_role (glueroleFCCAEB57) Policy arn:aws:iam::aws:policy/AWSGlueServiceRole does not exist or is not attachable. (Service: AmazonIdentityManagement; Status Code: 404; Error Code: NoSuchEntity; Request ID: 979c0601-f162-4243-b88d-7daaf9a8cf3b; Proxy: null)
+	new Role (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/aws-iam/lib/role.js:70:22)
+	\_ /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:49
+	\_ Kernel._wrapSandboxCode (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4040:16)
+	\_ Kernel._create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:26)
+	\_ Kernel.create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3300:21)
+	\_ KernelHost.processRequest (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13119:28)
+	\_ KernelHost.run (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13057:14)
+	\_ Immediate._onImmediate (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13060:37)
+	\_ processImmediate (internal/timers.js:456:21)
+ 0/8 | 6:15:58 PM | CREATE_FAILED        | AWS::CDK::Metadata  | CDKMetadata/Default (CDKMetadata) Resource creation cancelled
+	new MetadataResource (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/metadata-resource.js:22:30)
+	\_ /tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/synthesis.js:127:9
+	\_ visit (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)
+	\_ visit (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)
+	\_ injectMetadataResources (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/synthesis.js:116:5)
+	\_ Object.synthesize (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/private/synthesis.js:16:5)
+	\_ App.synth (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/core/lib/stage.js:98:41)
+	\_ /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3380:51
+	\_ Kernel._wrapSandboxCode (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4040:16)
+	\_ /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3380:25
+	\_ Kernel._ensureSync (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4017:20)
+	\_ Kernel.invoke (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3379:26)
+	\_ KernelHost.processRequest (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13119:28)
+	\_ KernelHost.run (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13057:14)
+	\_ Immediate._onImmediate (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13060:37)
+	\_ processImmediate (internal/timers.js:456:21)
+ 0/8 | 6:15:58 PM | CREATE_FAILED        | AWS::Glue::Database | findb (findbC824BA95) Resource creation cancelled
+	new Database (/tmp/jsii-kernel-EKx69R/node_modules/@aws-cdk/aws-glue/lib/database.js:31:26)
+	\_ /home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:49
+	\_ Kernel._wrapSandboxCode (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:4040:16)
+	\_ Kernel._create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3556:26)
+	\_ Kernel.create (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:3300:21)
+	\_ KernelHost.processRequest (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13119:28)
+	\_ KernelHost.run (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13057:14)
+	\_ Immediate._onImmediate (/home/machanv/xplrtst/frmwrk/cdkapp/.venv/lib/python3.7/site-packages/jsii/_embedded/jsii/jsii-runtime.js:13060:37)
+	\_ processImmediate (internal/timers.js:456:21)
+ 0/8 | 6:15:59 PM | ROLLBACK_IN_PROGRESS | AWS::CloudFormation::Stack | frmwrkCreateGlueComponents The following resource(s) failed to create: [glueroleFCCAEB57, findbC824BA95, CDKMetadata]. Rollback requested by user.
+ 0/8 | 6:16:06 PM | DELETE_IN_PROGRESS   | AWS::Glue::Database | findb (findbC824BA95) 
+ 0/8 | 6:16:07 PM | DELETE_IN_PROGRESS   | AWS::CDK::Metadata  | CDKMetadata/Default (CDKMetadata) 
+ 4/8 | 6:16:07 PM | DELETE_IN_PROGRESS   | AWS::IAM::Role      | glue_role (glueroleFCCAEB57) 
+ 4/8 | 6:16:08 PM | DELETE_COMPLETE      | AWS::CDK::Metadata  | CDKMetadata/Default (CDKMetadata) 
+ 4/8 | 6:16:08 PM | DELETE_COMPLETE      | AWS::Glue::Database | findb (findbC824BA95) 
+ 4/8 | 6:16:08 PM | DELETE_COMPLETE      | AWS::IAM::Role      | glue_role (glueroleFCCAEB57) 
+ 4/8 | 6:16:09 PM | ROLLBACK_COMPLETE    | AWS::CloudFormation::Stack | frmwrkCreateGlueComponents 
 
-TypeError: Cannot read property 'synthesize' of undefined
-    at /tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:142:35
-    at visit (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:181:9)
-    at visit (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:178:9)
-    at synthesizeTree (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:136:5)
-    at Object.synthesize (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/private/synthesis.js:32:5)
-    at App.synth (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/stage.js:98:41)
-    at process.<anonymous> (/tmp/jsii-kernel-zgtRC5/node_modules/@aws-cdk/core/lib/app.js:58:51)
-    at Object.onceWrapper (events.js:418:26)
-    at process.emit (events.js:311:20)
-Subprocess exited with error 1
+ ❌  frmwrkCreateGlueComponents failed: Error: The stack named frmwrkCreateGlueComponents failed creation, it may need to be manually deleted from the AWS console: ROLLBACK_COMPLETE
+    at Object.waitForStackDeploy (/usr/lib/nodejs/node-v12.16.1-linux-x64/lib/node_modules/aws-cdk/lib/api/util/cloudformation.ts:305:11)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at Object.deployStack (/usr/lib/nodejs/node-v12.16.1-linux-x64/lib/node_modules/aws-cdk/lib/api/deploy-stack.ts:283:26)
+    at CdkToolkit.deploy (/usr/lib/nodejs/node-v12.16.1-linux-x64/lib/node_modules/aws-cdk/lib/cdk-toolkit.ts:180:24)
+    at initCommandLine (/usr/lib/nodejs/node-v12.16.1-linux-x64/lib/node_modules/aws-cdk/bin/cdk.ts:201:9)
+The stack named frmwrkCreateGlueComponents failed creation, it may need to be manually deleted from the AWS console: ROLLBACK_COMPLETE

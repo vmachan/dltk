@@ -8,4 +8,3 @@ aws-cdk.aws_glue
 aws-cdk.aws_iam
 boto3
 botocore
-logging
